@@ -1,0 +1,99 @@
+.form-container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  padding-bottom: 150px;
+  border: 3px solid rgb(239, 217, 217);
+  border-radius: 10px;
+  background-color: #2a2222;
+  box-shadow: 0 14px 18px 0 rgba(90, 116, 122, 0.916), 0 8px 30px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+/* Styling for the form elements */
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+  color: white;
+
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-indent: 10px;
+}
+
+input[type="submit"] {
+  background-color: #efd8bbd7;
+  color: rgb(0, 0, 0);
+  padding: 12px 20px;
+  border: none;
+  float: left;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(82, 137, 227);
+  color: white
+}
+
+input[type="email"],
+input[type="password"] {
+  outline: rgb(227, 220, 82);
+}
+
+/* Styling for error message */
+.error {
+  color: red;
+  margin-bottom: 15px;
+  display: none;
+  /* Hide the error message by default */
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+}
+
+svg:hover {
+
+  color: rgb(0, 0, 0);
+  fill: white;
+}
+
+.top-right {
+  position: relative;
+  bottom: 320px;
+  left: 320px;
+
+}
+
+.lef {
+  float: left;
+  color: white;
+}
+
+.lef:hover {
+  color: rgb(46, 152, 228);
+}
+
+#sign {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  bottom: 40px;
+  left: 170px;
+}
+
+#sign:hover {
+  color: blue;
+}

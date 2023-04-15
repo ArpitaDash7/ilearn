@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+</html>
+<title>demo2</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <center>
+        <h1>GeeksforGeeks</h1>
+    </center>
+    <ul id="myList"></ul>
+    <script>
+        let data = ["Ram", "Shyam", "Sita", "Gita"];
+
+        let list = document.getElementById("myList");
+
+        data.forEach((item) => {
+            let li = document.createElement("li");
+            li.innerText = item;
+            list.appendChild(li);
+        });
+    </script>
+</body>

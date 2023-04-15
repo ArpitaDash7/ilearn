@@ -1,0 +1,265 @@
+/* homepage css  */
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  /* /background-color: rgb(129,18,100); */
+}
+
+li {
+  float: left;
+}
+
+li a,
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+li a:hover,
+.dropdown:hover.dropbtn {
+  border: 0.5px solid rgb(221, 183, 243);
+  border-radius: 20px;
+  color: rgb(128, 138, 196);
+  /* background-color: rgb(133, 41, 109); */
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  /* border */
+  border-radius: 20px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: hsl(0, 3%, 94%);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="Submit"] {
+  background-color: #000000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+
+}
+
+input[type="Submit"]:hover {
+  background-color: #45a049;
+}
+
+#form-container {
+  border-radius: 5px;
+  background-color: rgb(239, 236, 229);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1500px;
+  padding: 20px;
+}
+
+th,
+td {
+  align-items: center;
+  border: 1px solid rgb(241, 236, 236);
+  width: 300px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.center {
+  background-color: rgb(129, 18, 100);
+  color: rgb(241, 236, 236);
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.rbd-review-slider .rbd-preloader {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto;
+}
+
+.rbd-review-slider .rbd-review.rbd-prev {
+  transform: translate3d(-100px, 0, -50px);
+  display: inline-block;
+}
+
+.rbd-review-slider .rbd-review.rbd-next {
+  transform: translate3d(100px, 0, -50px);
+  display: inline-block;
+}
+
+.rbd-review-slider .rbd-review.rbd-curr {
+  z-index: 10;
+  transform: translate3d(0, 0, 0) scale(1);
+  opacity: 1;
+  display: inline-block;
+}
+
+.rbd-review-slider .rbd-review {
+  padding: 20px 30px;
+  font-size: 18px;
+  line-height: 1.612;
+  border-radius: 4px;
+  color: white;
+  box-shadow: 0 10px 30px -8px rgba(255, 255, 255, 0.5);
+  display: none;
+  vertical-align: top;
+  transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1300px;
+  margin: 0 auto;
+  overflow: hidden;
+  opacity: 0;
+  background: #000000;
+  max-width: 600px;
+}
+
+.rbd-review-slider .rbd-review.rbd-first {
+  display: block;
+}
+
+.rbd-review-slider .rbd-heading {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.rbd-review-slider svg {
+  fill: #ffbb58;
+  width: 24px;
+  margin-right: 1px;
+}
+
+.rbd-review-slider .rbd-review-meta {
+  font-size: 12px;
+  color: #565656;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.rbd-review-slider .rbd-gravatar {
+  border-radius: 100%;
+  width: 100px;
+  float: left;
+  margin-right: 15px;
+  border: 6px solid transparent;
+  box-shadow: 0 3px 12px -2px rgba(0, 0, 0, 0.35);
+}
+
+.rbd-footing {
+  margin: 20px 0 0;
+  text-align: center;
+}
+
+@keyframes round {
+  25% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+}
+
+meter {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  margin: 0 auto 1em;
+  width: 100%;
+  height: .5em;
+
+  /* Applicable only to Firefox */
+  background: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+meter::-webkit-meter-bar {
+  background: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+meter[value="1"]::-webkit-meter-optimum-value {
+  background: red;
+}
+
+meter[value="2"]::-webkit-meter-optimum-value {
+  background: yellow;
+}
+
+meter[value="3"]::-webkit-meter-optimum-value {
+  background: orange;
+}
+
+meter[value="4"]::-webkit-meter-optimum-value {
+  background: green;
+}
+
+footer {
+  margin-top: 30px;
+  color: #f1f1f1;
+  background-color: rgb(2, 1, 2);
+  padding-top: 100px;
+  padding-left: 100px;
+  padding-right: 80px;
+  padding-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}

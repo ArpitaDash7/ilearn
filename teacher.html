@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+</html>
+<title>iLearn</title>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .header,
+        .nav {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+        }
+
+        .header {
+            justify-content: space-between;
+        }
+
+        .nav {
+            -webkit-flex: 1;
+            flex: 1;
+            -webkit-justify-content: space-around;
+            justify-content: space-around;
+        }
+
+        @media all and (min-width: 640px) {
+
+            .header,
+            .nav {
+                -webkit-flex-direction: row;
+                flex-direction: row;
+            }
+        }
+
+        @media all and (min-width: 1030px) {
+            .nav {
+                -webkit-flex: none;
+                flex: none;
+            }
+        }
+
+
+        /******************************
+Treehouse Styling
+*******************************/
+
+        body {
+            margin: 0;
+            font-family: Helvetica;
+            background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/25480/hero-img.jpg') top center no-repeat;
+            background-size: 100%;
+        }
+
+        .header {
+            padding: 20px 0;
+            margin: 0 auto;
+        }
+
+        .logo {
+            background: transparent center center no-repeat;
+            width: 195px;
+            background-size: contain;
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .nav {
+            list-style: none;
+        }
+
+        .nav li {
+            margin: 12px 0 12px 28px;
+        }
+
+        .nav li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .nav li a:hover {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .nav li:last-child a {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            transition: 200ms ease-in-out;
+            padding: 8px 16px 7px;
+        }
+
+        .nav li:last-child a:hover {
+            background: rgba(255, 255, 255, 0.5);
+            color: #fff;
+        }
+
+        @media all and (min-width: 1030px) {
+            .header {
+                width: 1030px;
+                min-width: 768px;
+            }
+        }
+
+        .cssbuttons-io-button {
+            background: #ffffff;
+            color: rgb(0, 0, 0);
+            font-family: inherit;
+            padding: 0.35em;
+            padding-left: 1.2em;
+            font-size: 20px;
+            font-weight: 500;
+            border-radius: 0.9em;
+            border: none;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            box-shadow: inset 0 0 1.6em -0.6em rgb(234, 159, 255);
+            overflow: hidden;
+            position: absolute;
+            left: 280px;
+            top: 50px;
+            height: 5em;
+            padding-right: 5em;
+        }
+
+        .cssbuttons-io-button .icon {
+            background: rgb(255, 225, 31);
+            color: rgb(0, 0, 0);
+            margin-left: 1em;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 4em;
+            width: 3em;
+            border-radius: 0.7em;
+            box-shadow: 0.1em 0.1em 0.6em 0.2em rgb(234, 159, 255);
+            right: 0.3em;
+            transition: all 0.3s;
+        }
+
+        .cssbuttons-io-button:hover .icon {
+            width: calc(100% - 0.6em);
+        }
+
+        .cssbuttons-io-button .icon svg {
+            width: 1.1em;
+            transition: transform 0.3s;
+            color: #7b52b9;
+        }
+
+        .cssbuttons-io-button:hover .icon svg {
+            transform: translateX(0.1em);
+        }
+
+        .cssbuttons-io-button:active .icon {
+            transform: scale(0.95);
+        }
+
+        .cssbuttons-io-button2 {
+            background: #ffffff;
+            color: rgb(0, 0, 0);
+
+            font-family: inherit;
+            padding: 0.35em;
+            padding-left: 3em;
+            font-size: 20px;
+            font-weight: 500;
+            border-radius: 0.9em;
+            border: none;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            box-shadow: inset 0 0 1.6em -0.6em rgb(234, 159, 255);
+            overflow: hidden;
+            position: absolute;
+            left: 950px;
+            top: 50px;
+            height: 5em;
+            padding-right: 5em;
+        }
+
+        .cssbuttons-io-button2 .icon2 {
+            background: rgb(255, 225, 31);
+            color: rgb(0, 0, 0);
+            margin-left: 1em;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 4em;
+            width: 3em;
+            border-radius: 0.7em;
+            box-shadow: 0.1em 0.1em 0.6em 0.2em rgb(234, 159, 255);
+            right: 0.3em;
+            transition: all 0.3s;
+        }
+
+        .cssbuttons-io-button2:hover .icon2 {
+            width: calc(100% - 0.6em);
+        }
+
+        .cssbuttons-io-button2 .icon2 svg {
+            width: 1.1em;
+            transition: transform 0.3s;
+            color: #7b52b9;
+        }
+
+        .cssbuttons-io-button2:hover .icon2 svg {
+            transform: translateX(0.1em);
+        }
+
+        .cssbuttons-io-button2:active .icon2 {
+            transform: scale(0.95);
+        }
+
+        #pricing-footer {
+            max-width: 80rem;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 300px;
+        }
+
+        .price-help {
+            padding: 2rem;
+            text-align: center;
+
+
+        }
+
+        .support-title {
+            font-size: 1.8rem;
+        }
+
+        .support-description {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin: 1.5rem 0;
+        }
+
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: auto;
+            left: auto;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 500px;
+            padding: 40px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password],
+        .form-container input[type=email] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        .form-container textarea {
+            width: 90%;
+            padding: 30px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus,
+        .form-container input[type=email]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        .form-container textarea:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: red;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+
+
+
+        .footer {
+            max-width: 70%;
+            margin: 3rem auto;
+            overflow: auto;
+            background-color: black;
+            color: whitesmoke;
+            padding-left: 400px;
+            padding-right: 400px;
+            position: relative;
+            top: 300px;
+        }
+
+        .footer,
+        .footer a {
+            color: #999;
+            font-size: 1rem;
+            text-decoration: none;
+
+
+        }
+
+        .footer p {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer .footer-cols {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 1rem;
+        }
+
+        .footer li {
+            line-height: 1.9;
+            text-decoration: none;
+        }
+
+        @media (max-width: 1000px) {
+            .footer .footer-cols {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+
+</head>
+
+<body style="background-color: bisque;">
+    <header class="header">
+        <img src="E:\web dev\navlogo1.jpg" class="logo">
+        <b>
+            <ul class="nav">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Performance</a></li>
+                <li><a href="#">Manage Course</a></li>
+                <li><a href="E:\web dev\homepage1.html">Log out</a></li>
+            </ul>
+        </b>
+    </header>
+    <div style="color: white; position: relative; top:150px; font-size: 80px; left:150px;font-family:sans-serif">
+        Let's <br /> Teach.
+    </div>
+    <i>
+        <p style=" color: white; position: relative; top:130px; font-size: 40px; left:160px;font-family: sans-serif">
+            -The new way of teaching</p>
+    </i>
+    <section class="w3-container" style="background-color: black; position: relative;top:300px; padding-top:200px">
+        <a href="#"> <button class="cssbuttons-io-button"> ADD COURSE
+                <div class="icon">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                            fill="currentColor"></path>
+                    </svg>
+                </div>
+            </button></a>
+        <a href="#"><button class="cssbuttons-io-button2"> ADD QUIZ
+                <div class="icon2">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                            fill="currentColor"></path>
+                    </svg>
+                </div>
+            </button></a>
+
+    </section>
+    <div id="pricing-footer">
+        <div class="price-help">
+            <h4 class="support-title">Need a Support? </h4>
+            <p class="support-description">Any assistence or suggestion regarding this platform.</p>
+            <button class="open-button" onclick="openForm()">Contact Us</button>
+            <div class="form-popup" id="myForm">
+                <form action="myform" class="form-container">
+                    <h1>Contact Us</h1>
+
+                    <label for="name" style="padding-right:1000px;"><b>Name</b></label>
+                    <input type="text" placeholder="Enter Name" name="name" required>
+
+                    <label for="email" style="padding-right:1000px;"><b>Email</b></label>
+                    <input type="email" placeholder="Enter email" name="email" required>
+
+                    <label for="number" style="padding-right:1000px;"><b>Number</b></label>
+                    <input type="text" placeholder="Enter number" name="number" required>
+
+                    <label style="padding-right:1000px;"><b>Message</b></label>
+                    <textarea placeholder="Enter your suggestion" required></textarea>
+
+
+                    <button type="submit" class="btn">Submit</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <p>Questions? Call 1-866-579-7172</p>
+        <div class="footer-cols">
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Ways To Watch</a></li>
+                <li><a href="#">Corporate Information</a></li>
+                <li><a href="#">Netflix Originals</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Terms Of Use</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Redeem Gift Cards</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Speed Test</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Media Center</a></li>
+                <li><a href="#">Buy Gift Cards</a></li>
+                <li><a href="#">Cookie Preferences</a></li>
+                <li><a href="#">Legal Notices</a></li>
+            </ul>
+        </div>
+
+    </footer>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+            document.getElementById("pricing-footer").style.opacity = 0.5;
+            document.getElementById("footer").style.opacity = 0.5;
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+</body>

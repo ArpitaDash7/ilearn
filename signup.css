@@ -1,0 +1,142 @@
+.signup-form-container {
+    width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #1c1d1f;
+  }
+
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+  }
+
+  @property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+  }
+
+  @property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+  }
+
+
+  :root {
+    --d: 2500ms;
+    --angle: 90deg;
+    --gradX: 100%;
+    --gradY: 50%;
+    --c1: rgba(168, 239, 255, 1);
+    --c2: rgba(215, 164, 233, 0.553);
+  }
+
+ 
+  .signup-form-container {
+    border: 0.35rem solid;
+    border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+    animation: borderRotate var(--d) linear infinite forwards;
+  }
+
+  .signup-form-container:nth-child(2) {
+    border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
+    animation: borderRadial var(--d) linear infinite forwards;
+  }
+
+  @keyframes borderRotate {
+    100% {
+      --angle: 420deg;
+    }
+  }
+
+  @keyframes borderRadial {
+    20% {
+      --gradX: 100%;
+      --gradY: 50%;
+    }
+
+    40% {
+      --gradX: 100%;
+      --gradY: 100%;
+    }
+
+    60% {
+      --gradX: 50%;
+      --gradY: 100%;
+    }
+
+    80% {
+      --gradX: 0%;
+      --gradY: 50%;
+    }
+
+    100% {
+      --gradX: 50%;
+      --gradY: 0%;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  label,
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+
+  label {
+    font-weight: bold;
+    color: white;
+  }
+
+
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: #f1f1f1;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    background-color: #fff;
+  }
+
+  .signupbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+
+  .signupbtn:hover {
+    opacity: 1;
+  }
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  #log{
+    color: white;
+  }
+  #log:hover{
+  color: blue;
+  }
